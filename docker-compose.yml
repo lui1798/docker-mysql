@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+      image: mysql:5.6.1
+      ports:
+        - "3306:33306"
+      environment:
+        - MYSQL_USER=lui
+        - MYSQL_PASSWORD=123
+        - MYSQL_PORT=33306
+        - MYSQL_HOST=127.0.0.1
+      volumes:
+        - ./docker/data:/data
